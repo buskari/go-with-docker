@@ -1,0 +1,8 @@
+FROM golang
+
+RUN go install github.com/cosmtrek/air@latest
+WORKDIR /usr/app
+
+COPY ./ ./
+
+CMD air
